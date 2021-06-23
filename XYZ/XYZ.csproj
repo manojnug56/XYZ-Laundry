@@ -1,0 +1,1986 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F87F1AED-A1FA-4FF2-9BE6-3AC894A0C692}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XYZ</RootNamespace>
+    <AssemblyName>XYZ</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\images\avatar-1.jpg" />
+    <Content Include="assets\images\avatar-2.jpg" />
+    <Content Include="assets\images\avatar-3.jpg" />
+    <Content Include="assets\images\avatar-4.jpg" />
+    <Content Include="assets\images\avatar-5.jpg" />
+    <Content Include="assets\images\bitbucket.png" />
+    <Content Include="assets\images\card-img-1.jpg" />
+    <Content Include="assets\images\card-img-2.jpg" />
+    <Content Include="assets\images\card-img-3.jpg" />
+    <Content Include="assets\images\card-img.jpg" />
+    <Content Include="assets\images\down-arrow.png" />
+    <Content Include="assets\images\drag-indicator.png" />
+    <Content Include="assets\images\dribbble.png" />
+    <Content Include="assets\images\dropbox.png" />
+    <Content Include="assets\images\eco-product-img-1.png" />
+    <Content Include="assets\images\eco-product-img-2.png" />
+    <Content Include="assets\images\eco-product-img-3.png" />
+    <Content Include="assets\images\eco-product-img-4.png" />
+    <Content Include="assets\images\eco-slider-img-1.png" />
+    <Content Include="assets\images\eco-slider-img-2.png" />
+    <Content Include="assets\images\eco-slider-img-3.png" />
+    <Content Include="assets\images\error-img.png" />
+    <Content Include="assets\images\github.png" />
+    <Content Include="assets\images\loader.svg" />
+    <Content Include="assets\images\logox.png" />
+    <Content Include="assets\images\mail_chimp.png" />
+    <Content Include="assets\images\product-pic-2.jpg" />
+    <Content Include="assets\images\product-pic-3.jpg" />
+    <Content Include="assets\images\product-pic-4.jpg" />
+    <Content Include="assets\images\product-pic.jpg" />
+    <Content Include="assets\images\slack.png" />
+    <Content Include="assets\images\switch.png" />
+    <Content Include="assets\images\unnamed %281%29.png" />
+    <Content Include="assets\libs\css\style.css" />
+    <Content Include="assets\libs\js\dashboard-ecommerce.js" />
+    <Content Include="assets\libs\js\dashboard-finance.js" />
+    <Content Include="assets\libs\js\dashboard-influencer.js" />
+    <Content Include="assets\libs\js\dashboard-sales.js" />
+    <Content Include="assets\libs\js\gmaps.min.js" />
+    <Content Include="assets\libs\js\google_map.js" />
+    <Content Include="assets\libs\js\jvectormap.custom.js" />
+    <Content Include="assets\libs\js\main-js.js" />
+    <Content Include="assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.css" />
+    <Content Include="assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.min.js" />
+    <Content Include="assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.png" />
+    <Content Include="assets\vendor\bootstrap-colorpicker\jquery-asColorPicker\dist\jquery-asColorPicker.min.js" />
+    <Content Include="assets\vendor\bootstrap-colorpicker\jquery-asColor\dist\jquery-asColor.min.js" />
+    <Content Include="assets\vendor\bootstrap-colorpicker\jquery-asGradient\dist\jquery-asGradient.js" />
+    <Content Include="assets\vendor\bootstrap-select\css\bootstrap-select.css" />
+    <Content Include="assets\vendor\bootstrap-select\js\bootstrap-select.js" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="assets\vendor\charts\c3charts\c3.css" />
+    <Content Include="assets\vendor\charts\c3charts\c3.min.js" />
+    <Content Include="assets\vendor\charts\c3charts\C3chartjs.js" />
+    <Content Include="assets\vendor\charts\c3charts\d3-5.4.0.min.js" />
+    <Content Include="assets\vendor\charts\chartist-bundle\chartist-plugin-threshold.js" />
+    <Content Include="assets\vendor\charts\chartist-bundle\chartist.css" />
+    <Content Include="assets\vendor\charts\chartist-bundle\chartist.min.js" />
+    <Content Include="assets\vendor\charts\chartist-bundle\Chartistjs.js" />
+    <Content Include="assets\vendor\charts\charts-bundle\Chart.bundle.js" />
+    <Content Include="assets\vendor\charts\charts-bundle\chartjs.js" />
+    <Content Include="assets\vendor\charts\morris-bundle\morris.css" />
+    <Content Include="assets\vendor\charts\morris-bundle\morris.js" />
+    <Content Include="assets\vendor\charts\morris-bundle\morrisjs.html" />
+    <Content Include="assets\vendor\charts\morris-bundle\Morrisjs.js" />
+    <Content Include="assets\vendor\charts\morris-bundle\raphael.min.js" />
+    <Content Include="assets\vendor\charts\sparkline\jquery.sparkline.js" />
+    <Content Include="assets\vendor\charts\sparkline\spark-js.js" />
+    <Content Include="assets\vendor\cropper\dist\cropper-int.js" />
+    <Content Include="assets\vendor\cropper\dist\cropper.min.css" />
+    <Content Include="assets\vendor\cropper\dist\cropper.min.js" />
+    <Content Include="assets\vendor\custom-js\jquery.multi-select.html" />
+    <Content Include="assets\vendor\datatables\css\buttons.bootstrap4.css" />
+    <Content Include="assets\vendor\datatables\css\dataTables.bootstrap4.css" />
+    <Content Include="assets\vendor\datatables\css\fixedHeader.bootstrap4.css" />
+    <Content Include="assets\vendor\datatables\css\select.bootstrap4.css" />
+    <Content Include="assets\vendor\datatables\js\buttons.bootstrap4.min.js" />
+    <Content Include="assets\vendor\datatables\js\data-table.js" />
+    <Content Include="assets\vendor\datatables\js\dataTables.bootstrap4.min.js" />
+    <Content Include="assets\vendor\datepicker\datepicker.js" />
+    <Content Include="assets\vendor\datepicker\moment.js" />
+    <Content Include="assets\vendor\datepicker\tempusdominus-bootstrap-4.css" />
+    <Content Include="assets\vendor\datepicker\tempusdominus-bootstrap-4.js" />
+    <Content Include="assets\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="assets\vendor\dropzone\dropzone.js" />
+    <Content Include="assets\vendor\fonts\circular-std\style.css" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flag-icon.min.css" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ad.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ae.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\af.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ag.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ai.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\al.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\am.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ao.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\aq.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ar.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\as.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\at.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\au.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\aw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ax.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\az.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ba.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bb.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bd.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\be.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bf.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bh.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bi.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bj.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bl.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bo.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bq.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\br.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bs.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bt.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bv.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\by.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\bz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ca.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cc.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cd.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cf.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ch.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ci.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ck.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cl.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\co.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cu.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cv.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cx.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cy.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\cz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\de.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\dj.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\dk.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\dm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\do.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\dz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ec.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ee.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\eg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\eh.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\er.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\es.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\et.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\fi.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\fj.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\fk.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\fm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\fo.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\fr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ga.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gb.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gd.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ge.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gf.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gh.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gi.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gl.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gp.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gq.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gs.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gt.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gu.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\gy.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\hk.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\hm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\hn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\hr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ht.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\hu.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\id.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ie.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\il.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\im.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\in.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\io.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\iq.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ir.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\is.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\it.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\je.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\jm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\jo.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\jp.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ke.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\kg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\kh.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ki.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\km.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\kn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\kp.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\kr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\kw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ky.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\kz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\la.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\lb.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\lc.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\li.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\lk.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\lr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ls.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\lt.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\lu.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\lv.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ly.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ma.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mc.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\md.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\me.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mf.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mh.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mk.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ml.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mo.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mp.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mq.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ms.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mt.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mu.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mv.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mx.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\my.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\mz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\na.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\nc.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ne.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\nf.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ng.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ni.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\nl.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\no.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\np.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\nr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\nu.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\nz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\om.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pa.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pe.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pf.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ph.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pk.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pl.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ps.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pt.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\pw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\py.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\qa.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\re.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ro.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\rs.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ru.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\rw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sa.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sb.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sc.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sd.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\se.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sh.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\si.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sj.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sk.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sl.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\so.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ss.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\st.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sv.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sx.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sy.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\sz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tc.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\td.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tf.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\th.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tj.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tk.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tl.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\to.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tr.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tt.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tv.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tw.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\tz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ua.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ug.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\um.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\us.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\uy.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\uz.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\va.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\vc.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ve.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\vg.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\vi.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\vn.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\vu.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\wf.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ws.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\ye.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\yt.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\za.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\zm.svg" />
+    <Content Include="assets\vendor\fonts\flag-icon-css\flags\zw.svg" />
+    <Content Include="assets\vendor\fonts\fontawesome\css\fontawesome-all.css" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.html" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.html" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.html" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="assets\vendor\fonts\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.html" />
+    <Content Include="assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.svg" />
+    <Content Include="assets\vendor\fonts\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.html" />
+    <Content Include="assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.svg" />
+    <Content Include="assets\vendor\fonts\themify-icons\fonts\themify9f24.svg" />
+    <Content Include="assets\vendor\fonts\themify-icons\themify-icons.css" />
+    <Content Include="assets\vendor\fonts\weather-icons\css\weather-icons.min.css" />
+    <Content Include="assets\vendor\full-calendar\css\fullcalendar.css" />
+    <Content Include="assets\vendor\full-calendar\css\fullcalendar.print.css" />
+    <Content Include="assets\vendor\full-calendar\js\calendar.js" />
+    <Content Include="assets\vendor\full-calendar\js\fullcalendar.js" />
+    <Content Include="assets\vendor\full-calendar\js\jquery-ui.min.js" />
+    <Content Include="assets\vendor\full-calendar\js\moment.min.js" />
+    <Content Include="assets\vendor\gauge\gauge.js" />
+    <Content Include="assets\vendor\gauge\gauge.min.js" />
+    <Content Include="assets\vendor\inputmask\css\inputmask.css" />
+    <Content Include="assets\vendor\inputmask\js\jquery.inputmask.bundle.js" />
+    <Content Include="assets\vendor\jquery\jquery-3.3.1.min.js" />
+    <Content Include="assets\vendor\jvectormap\jquery-jvectormap-2.0.2.css" />
+    <Content Include="assets\vendor\jvectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="assets\vendor\jvectormap\jquery-jvectormap-au-mill.js" />
+    <Content Include="assets\vendor\jvectormap\jquery-jvectormap-in-mill.js" />
+    <Content Include="assets\vendor\jvectormap\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="assets\vendor\jvectormap\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="assets\vendor\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="assets\vendor\multi-select\css\multi-select.css" />
+    <Content Include="assets\vendor\multi-select\js\jquery.multi-select.js" />
+    <Content Include="assets\vendor\parsley\parsley.js" />
+    <Content Include="assets\vendor\select2\css\select2.css" />
+    <Content Include="assets\vendor\select2\js\select2.min.js" />
+    <Content Include="assets\vendor\shortable-nestable\jquery.nestable.js" />
+    <Content Include="assets\vendor\shortable-nestable\sort-nest.js" />
+    <Content Include="assets\vendor\shortable-nestable\Sortable.min.js" />
+    <Content Include="assets\vendor\slimscroll\jquery.slimscroll.js" />
+    <Content Include="assets\vendor\summernote\css\summernote-bs4.css" />
+    <Content Include="assets\vendor\summernote\js\summernote-bs4.js" />
+    <Content Include="assets\vendor\timeline\img\cd-icon-location.svg" />
+    <Content Include="assets\vendor\timeline\img\cd-icon-movie.svg" />
+    <Content Include="assets\vendor\timeline\img\cd-icon-picture.svg" />
+    <Content Include="assets\vendor\timeline\js\main.js" />
+    <Content Include="assets\vendor\vector-map\jqvmap.css" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_cs.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_da.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_de.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_en.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_es.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_fi.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_fr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_hu.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_it.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_ja.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_ko.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_nb.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_nl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_pl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_pt.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_ru.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_sk.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_sv.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_th.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_tr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\CRViewer_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_cs.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_da.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_de.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_en.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_es.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_fi.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_fr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_hu.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_it.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_ja.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_ko.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_nb.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_nl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_pl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_pt.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_ru.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_sk.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_sv.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_th.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_tr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\csprintdlg_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\LCIDTable.xml" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_cs.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_cs.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_da.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_da.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_de.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_de.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_en.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_en.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_es.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_es.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_fi.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_fi.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_fr.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_fr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_hu.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_hu.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_it.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_it.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ja.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ja.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ko.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ko.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_nb.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_nb.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_nl.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_nl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_pl.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_pl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_pt.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_pt.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ru.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_ru.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_sk.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_sk.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_sv.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_sv.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_th.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_th.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_tr.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_tr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_zh_CN.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_zh_TW.cab" />
+    <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\pvlocale-1-0.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_cs.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_da.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_de.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_en.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_es.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_fi.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_fr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_hu.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_it.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_ja.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_ko.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_nb.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_nl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_pl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_pt.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_ru.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_sk.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_sv.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_th.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_tr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\sviewhlp_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_cs.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_da.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_de.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_en.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_es.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_fi.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_fr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_hu.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_it.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_ja.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_ko.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_nb.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_nl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_pl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_pt.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_ru.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_sk.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_sv.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_th.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_tr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\swebrs_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_cs.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_da.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_de.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_en.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_es.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_fi.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_fr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_hu.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_it.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_ja.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_ko.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_nb.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_nl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_pl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_pt.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_ru.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_sk.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_sv.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_th.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_tr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\csprintdlg_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_cs.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_da.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_de.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_en.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_es.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_fi.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_fr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_hu.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_it.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_ja.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_ko.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_nb.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_nl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_pl.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_pt.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_ru.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_sk.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_sv.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_th.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_tr.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\PrintControl_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\pvlocale-1-0.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\xerces-c_2_7.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\win64_x64\XERCES27_LICENSE.txt" />
+    <Content Include="crystalreportviewers13\ActiveXControls\xerces-c_2_7.dll" />
+    <Content Include="crystalreportviewers13\ActiveXControls\XERCES27_LICENSE.txt" />
+    <Content Include="crystalreportviewers13\allInOne.js" />
+    <Content Include="crystalreportviewers13\allStrings_cs.js" />
+    <Content Include="crystalreportviewers13\allStrings_da.js" />
+    <Content Include="crystalreportviewers13\allStrings_de.js" />
+    <Content Include="crystalreportviewers13\allStrings_en.js" />
+    <Content Include="crystalreportviewers13\allStrings_es.js" />
+    <Content Include="crystalreportviewers13\allStrings_fi.js" />
+    <Content Include="crystalreportviewers13\allStrings_fr.js" />
+    <Content Include="crystalreportviewers13\allStrings_hu.js" />
+    <Content Include="crystalreportviewers13\allStrings_it.js" />
+    <Content Include="crystalreportviewers13\allStrings_ja.js" />
+    <Content Include="crystalreportviewers13\allStrings_ko.js" />
+    <Content Include="crystalreportviewers13\allStrings_nb.js" />
+    <Content Include="crystalreportviewers13\allStrings_nl.js" />
+    <Content Include="crystalreportviewers13\allStrings_pl.js" />
+    <Content Include="crystalreportviewers13\allStrings_pt.js" />
+    <Content Include="crystalreportviewers13\allStrings_ru.js" />
+    <Content Include="crystalreportviewers13\allStrings_sk.js" />
+    <Content Include="crystalreportviewers13\allStrings_sv.js" />
+    <Content Include="crystalreportviewers13\allStrings_th.js" />
+    <Content Include="crystalreportviewers13\allStrings_tr.js" />
+    <Content Include="crystalreportviewers13\allStrings_zh_CN.js" />
+    <Content Include="crystalreportviewers13\allStrings_zh_TW.js" />
+    <Content Include="crystalreportviewers13\crsmarttag.asp" />
+    <Content Include="crystalreportviewers13\crystalimagehandler.asp" />
+    <Content Include="crystalreportviewers13\css\cedefault.css" />
+    <Content Include="crystalreportviewers13\css\default.css" />
+    <Content Include="crystalreportviewers13\css\exception.css" />
+    <Content Include="crystalreportviewers13\css\prompting.css" />
+    <Content Include="crystalreportviewers13\html\calendar.html" />
+    <Content Include="crystalreportviewers13\html\calendarbottom.html" />
+    <Content Include="crystalreportviewers13\html\calendartop.html" />
+    <Content Include="crystalreportviewers13\imagehandlerdotnetbridge.aspx" />
+    <Content Include="crystalreportviewers13\images\buttonl.gif" />
+    <Content Include="crystalreportviewers13\images\buttonm.gif" />
+    <Content Include="crystalreportviewers13\images\buttonr.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive350.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortActive50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover350.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortHover50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\DownArrowSortInactive50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive350.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortActive50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover350.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortHover50.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive100.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive150.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive200.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive250.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive300.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive400.gif" />
+    <Content Include="crystalreportviewers13\images\isort\UpArrowSortInactive50.gif" />
+    <Content Include="crystalreportviewers13\js\calendar.js" />
+    <Content Include="crystalreportviewers13\js\calendar_param.js" />
+    <Content Include="crystalreportviewers13\js\crviewerinclude.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\api.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ArgumentNormalizer.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\bobjcallback.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ButtonList.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Calendar.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Colors.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\common.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\crv.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Dialogs.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\dom.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\encoding.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\event.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\GroupTree.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\GroupTreeListener.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\GroupTreeNode.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\html.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ImageSprites.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\allInOne.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\allInOneBG.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\arrow_button_depressed.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\arrow_button_hover.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\breadcrumbSep.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\calendar.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\catalyst.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\clearValues.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\clear_x.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\closePanel.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\delete.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\drill_cursor.cur" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\export.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\filledCircle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\first.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\grouptree_toggle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\hollowCircle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\last.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\leftTriangle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\line.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\logo.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\magnify.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\min.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\next.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\open_parameter_arrow.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\panelHeaderBG.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\panelNavigatorItemHL.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\panelNavigatorItemSelectedBG.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\panel_toggle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_datafetching.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_dirty.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_info.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_run.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\param_warning.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\plus.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\prev.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\print.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\refresh.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\rightTriangle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\search.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\separator.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\StackedTab.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\style.css" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_background.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_background.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_left.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_right.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_button_depressed.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_button_hover.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_menuarrow_depressed.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_menuarrow_hover.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_pagenav_buttons.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\toolbar_separator_icon.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\undo.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\up.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\images\WarningPopupTriangle.gif" />
+    <Content Include="crystalreportviewers13\js\crviewer\initDhtmlLib.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\IOAdapters.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\LeftPanel.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\OptionalParameterUI.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\OptionalParameterValueRow.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\PanelHeader.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\PanelNavigator.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\PanelNavigatorItem.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Parameter.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterController.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterDialog.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterInfoRow.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterPanel.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterPanelToolbar.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterUI.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ParameterValueRow.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\PromptPage.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\RangeField.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ReportAlbum.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ReportPage.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ReportView.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Separator.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\SharedWidgetHolder.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\SignalDisposer.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\StackedPanel.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\StackedTab.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\StateManager.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Statusbar.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_cs.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_da.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_de.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_en.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_es.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_fi.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_fr.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_hu.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_it.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_ja.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_ko.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_nb.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_nl.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_pl.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_pt.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_ru.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_sk.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_sv.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_th.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_tr.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_zh_CN.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\strings_zh_TW.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\TextCombo.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\TextField.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Toolbar.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ToolPanel.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\Viewer.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ViewerFlexParameterAdapter.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\ViewerListener.js" />
+    <Content Include="crystalreportviewers13\js\crviewer\WarningPopup.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\bolist.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\calendar.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\dialog.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\dom.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\empty.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\borders.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\help.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\loading.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\lov.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\min.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\plus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\print.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\print_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\prompt.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\resizepattern.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\bolist.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\button.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\buttonIcons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\critical_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframe.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\down.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\iconsep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\information_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\left.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\menus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\node.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\progress.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\resize.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\right.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\scroll_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\sep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\sep_solid.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\up.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\wait01.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\wait02.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_coloredline\warning_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\bolist.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\button.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\buttonIcons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\critical_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframe.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\down.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\iconsep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\information_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\left.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\menus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\node.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\progress.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\resize.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\right.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\scroll_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\sep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\sep_solid.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\style.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\style.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\style_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\up.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\wait01.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\wait02.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_corporate\warning_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\bolist.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\button.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\buttonIcons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\critical_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframe.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\down.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\iconsep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\information_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\left.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\menus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\node.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\progress.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\resize.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\right.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\scroll_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\sep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\sep_solid.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\style.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\style.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\style_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\up.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\wait01.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\wait02.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_default\warning_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\background_field.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\background_menusel.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\bolist.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\button.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\buttonIcons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\critical_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\critical_icon.png" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframe.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\down.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\hgrab.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\horiz_tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\iconsep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\information_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\left.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\menuitem_check.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\menus.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\node.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\panemenu.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\panetitle.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\progress.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\resize.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\right.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\scroll_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\sep.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\sep_solid.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\style.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\style.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\style_fe.css" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\tabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\toolbar_elements.png" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\up.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\vgrab.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\wait01.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\wait02.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\skin_standard\warning_icon.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\swap.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\transp.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\images\tree.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\cs\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\da\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\de\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\en\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\es\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\fi\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\fr\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\hu\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\it\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\ja\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\ko\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\nb\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\nl\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\pl\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\pt\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\ru\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\sk\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\sv\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\th\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\tr\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\zh_CN\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\language\zh_TW\labels.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\lov.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\menu.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\palette.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\prompttree.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\psheet.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\andorwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\basicDialog.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\blockWhileWait.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\bolist.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\borderswidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\buttons.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\calendar.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\checktree.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\default.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\dim.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\dim_close.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\dim_o.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\dim_open.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\empty.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\eventsDialog.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\fieldswidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\format.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\framezone.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\grabber.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\iconlistpopupwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\iconscrollmenuwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\imgtabs.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\inconwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\infowidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\lov.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\measure.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\measure_o.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\menu.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\navigation.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\palettes.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\pane.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\parent_dialog.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\progressBar.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\prompttree.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\qualif.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\scrolltabs.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\simplelist.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\skinIntl.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\tabs.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\textcombowidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\tooltipwidget.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\treeicons.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\treeview.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\unv_close.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\unv_o.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\unv_open.gif" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\samples\waitDialog.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\treeview.js" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\validator\default.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\validator\validator_res.html" />
+    <Content Include="crystalreportviewers13\js\dhtmllib\waitdialog.js" />
+    <Content Include="crystalreportviewers13\js\dt_param.js" />
+    <Content Include="crystalreportviewers13\js\external\date.js" />
+    <Content Include="crystalreportviewers13\js\FlexParameterBridge.js" />
+    <Content Include="crystalreportviewers13\js\KeyDownEvent.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\log4javascript.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\log4javascript_stub.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\log4javascript_stub_uncompressed.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\log4javascript_uncompressed.js" />
+    <Content Include="crystalreportviewers13\js\log4javascript\main.css" />
+    <Content Include="crystalreportviewers13\js\MochiKit\3rdParty.txt" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Async.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Base.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Color.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Controls.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\DateTime.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\DOM.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\DragAndDrop.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Format.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Iter.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\License.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Logging.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\LoggingPane.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\MochiKit.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\MockDOM.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\New.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Signal.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Sortable.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Style.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Test.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\Visual.js" />
+    <Content Include="crystalreportviewers13\js\MochiKit\__package__.js" />
+    <Content Include="crystalreportviewers13\js\previewerror.js" />
+    <Content Include="crystalreportviewers13\js\prompts.js" />
+    <Content Include="crystalreportviewers13\js\prompts_param.js" />
+    <Content Include="crystalreportviewers13\js\swfobject\swfobject.js" />
+    <Content Include="crystalreportviewers13\parameterUIController-compressed.js" />
+    <Content Include="crystalreportviewers13\preview.aspx" />
+    <Content Include="crystalreportviewers13\processindicator.js" />
+    <Content Include="crystalreportviewers13\promptengine-compressed.js" />
+    <Content Include="crystalreportviewers13\prompting\css\promptengine2.css" />
+    <Content Include="crystalreportviewers13\prompting\css\promptengine_default.css" />
+    <Content Include="crystalreportviewers13\prompting\html\calendar.html" />
+    <Content Include="crystalreportviewers13\prompting\html\calendarbottom.html" />
+    <Content Include="crystalreportviewers13\prompting\html\calendartop.html" />
+    <Content Include="crystalreportviewers13\prompting\images\addallfield.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\addallfield_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\addfield.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\addfield_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\back.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\background_field.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\back_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\button.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\button_left_normal.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\button_middle_normal.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\button_right_normal.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\calendar.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\cfilter.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\cfilter_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\dialogelements.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\dialogtitle.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\error.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\errormsg.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\filter.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\filter_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\forward.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\forward_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\info.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\infomsg.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\minus.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\next.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\next_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\plus.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\prev.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\prev_over.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\resize.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\transp.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\warning.gif" />
+    <Content Include="crystalreportviewers13\prompting\images\warningmsg.gif" />
+    <Content Include="crystalreportviewers13\prompting\js\initDhtmlLib.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_calendar.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_calendar2.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_prompts.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_prompts2.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_cs.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_da.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_de.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_en.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_es.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_fi.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_fr.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_hu.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_it.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_ja.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_ko.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_nb.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_nl.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_pl.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_pt.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_ru.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_sk.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_sv.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_th.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_tr.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_zh_CN.js" />
+    <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
+    <Content Include="crystalreportviewers13\urlreporting\activexviewer.js" />
+    <Content Include="crystalreportviewers13\urlreporting\appletviewer.js" />
+    <Content Include="Customer.aspx" />
+    <Content Include="CustomerAccount.aspx" />
+    <Content Include="Customer\assets\images\avatar-1.jpg" />
+    <Content Include="Customer\assets\images\avatar-2.jpg" />
+    <Content Include="Customer\assets\images\avatar-3.jpg" />
+    <Content Include="Customer\assets\images\avatar-4.jpg" />
+    <Content Include="Customer\assets\images\avatar-5.jpg" />
+    <Content Include="Customer\assets\images\bitbucket.png" />
+    <Content Include="Customer\assets\images\card-img-1.jpg" />
+    <Content Include="Customer\assets\images\card-img-2.jpg" />
+    <Content Include="Customer\assets\images\card-img-3.jpg" />
+    <Content Include="Customer\assets\images\card-img.jpg" />
+    <Content Include="Customer\assets\images\down-arrow.png" />
+    <Content Include="Customer\assets\images\drag-indicator.png" />
+    <Content Include="Customer\assets\images\dribbble.png" />
+    <Content Include="Customer\assets\images\dropbox.png" />
+    <Content Include="Customer\assets\images\eco-product-img-1.png" />
+    <Content Include="Customer\assets\images\eco-product-img-2.png" />
+    <Content Include="Customer\assets\images\eco-product-img-3.png" />
+    <Content Include="Customer\assets\images\eco-product-img-4.png" />
+    <Content Include="Customer\assets\images\eco-slider-img-1.png" />
+    <Content Include="Customer\assets\images\eco-slider-img-2.png" />
+    <Content Include="Customer\assets\images\eco-slider-img-3.png" />
+    <Content Include="Customer\assets\images\error-img.png" />
+    <Content Include="Customer\assets\images\github.png" />
+    <Content Include="Customer\assets\images\loader.svg" />
+    <Content Include="Customer\assets\images\logo.png" />
+    <Content Include="Customer\assets\images\mail_chimp.png" />
+    <Content Include="Customer\assets\images\product-pic-2.jpg" />
+    <Content Include="Customer\assets\images\product-pic-3.jpg" />
+    <Content Include="Customer\assets\images\product-pic-4.jpg" />
+    <Content Include="Customer\assets\images\product-pic.jpg" />
+    <Content Include="Customer\assets\images\slack.png" />
+    <Content Include="Customer\assets\images\switch.png" />
+    <Content Include="Customer\assets\libs\css\style.css" />
+    <Content Include="Customer\assets\libs\js\dashboard-ecommerce.js" />
+    <Content Include="Customer\assets\libs\js\dashboard-finance.js" />
+    <Content Include="Customer\assets\libs\js\dashboard-influencer.js" />
+    <Content Include="Customer\assets\libs\js\dashboard-sales.js" />
+    <Content Include="Customer\assets\libs\js\gmaps.min.js" />
+    <Content Include="Customer\assets\libs\js\google_map.js" />
+    <Content Include="Customer\assets\libs\js\jvectormap.custom.js" />
+    <Content Include="Customer\assets\libs\js\main-js.js" />
+    <Content Include="Customer\assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.css" />
+    <Content Include="Customer\assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.min.js" />
+    <Content Include="Customer\assets\vendor\bootstrap-colorpicker\%40claviska\jquery-minicolors\jquery.minicolors.png" />
+    <Content Include="Customer\assets\vendor\bootstrap-colorpicker\jquery-asColorPicker\dist\jquery-asColorPicker.min.js" />
+    <Content Include="Customer\assets\vendor\bootstrap-colorpicker\jquery-asColor\dist\jquery-asColor.min.js" />
+    <Content Include="Customer\assets\vendor\bootstrap-colorpicker\jquery-asGradient\dist\jquery-asGradient.js" />
+    <Content Include="Customer\assets\vendor\bootstrap-select\css\bootstrap-select.css" />
+    <Content Include="Customer\assets\vendor\bootstrap-select\js\bootstrap-select.js" />
+    <Content Include="Customer\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Customer\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Customer\assets\vendor\charts\c3charts\c3.css" />
+    <Content Include="Customer\assets\vendor\charts\c3charts\c3.min.js" />
+    <Content Include="Customer\assets\vendor\charts\c3charts\C3chartjs.js" />
+    <Content Include="Customer\assets\vendor\charts\c3charts\d3-5.4.0.min.js" />
+    <Content Include="Customer\assets\vendor\charts\chartist-bundle\chartist-plugin-threshold.js" />
+    <Content Include="Customer\assets\vendor\charts\chartist-bundle\chartist.css" />
+    <Content Include="Customer\assets\vendor\charts\chartist-bundle\chartist.min.js" />
+    <Content Include="Customer\assets\vendor\charts\chartist-bundle\Chartistjs.js" />
+    <Content Include="Customer\assets\vendor\charts\charts-bundle\Chart.bundle.js" />
+    <Content Include="Customer\assets\vendor\charts\charts-bundle\chartjs.js" />
+    <Content Include="Customer\assets\vendor\charts\morris-bundle\morris.css" />
+    <Content Include="Customer\assets\vendor\charts\morris-bundle\morris.js" />
+    <Content Include="Customer\assets\vendor\charts\morris-bundle\morrisjs.html" />
+    <Content Include="Customer\assets\vendor\charts\morris-bundle\Morrisjs.js" />
+    <Content Include="Customer\assets\vendor\charts\morris-bundle\raphael.min.js" />
+    <Content Include="Customer\assets\vendor\charts\sparkline\jquery.sparkline.js" />
+    <Content Include="Customer\assets\vendor\charts\sparkline\spark-js.js" />
+    <Content Include="Customer\assets\vendor\cropper\dist\cropper-int.js" />
+    <Content Include="Customer\assets\vendor\cropper\dist\cropper.min.css" />
+    <Content Include="Customer\assets\vendor\cropper\dist\cropper.min.js" />
+    <Content Include="Customer\assets\vendor\custom-js\jquery.multi-select.html" />
+    <Content Include="Customer\assets\vendor\datatables\css\buttons.bootstrap4.css" />
+    <Content Include="Customer\assets\vendor\datatables\css\dataTables.bootstrap4.css" />
+    <Content Include="Customer\assets\vendor\datatables\css\fixedHeader.bootstrap4.css" />
+    <Content Include="Customer\assets\vendor\datatables\css\select.bootstrap4.css" />
+    <Content Include="Customer\assets\vendor\datatables\js\buttons.bootstrap4.min.js" />
+    <Content Include="Customer\assets\vendor\datatables\js\data-table.js" />
+    <Content Include="Customer\assets\vendor\datatables\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Customer\assets\vendor\datepicker\datepicker.js" />
+    <Content Include="Customer\assets\vendor\datepicker\moment.js" />
+    <Content Include="Customer\assets\vendor\datepicker\tempusdominus-bootstrap-4.css" />
+    <Content Include="Customer\assets\vendor\datepicker\tempusdominus-bootstrap-4.js" />
+    <Content Include="Customer\assets\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Customer\assets\vendor\dropzone\dropzone.js" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\style.css" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flag-icon.min.css" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ad.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ae.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\af.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ag.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ai.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\al.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\am.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ao.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\aq.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ar.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\as.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\at.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\au.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\aw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ax.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\az.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ba.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bb.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bd.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\be.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bf.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bh.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bi.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bj.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bl.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bo.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bq.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\br.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bs.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bt.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bv.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\by.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\bz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ca.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cc.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cd.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cf.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ch.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ci.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ck.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cl.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\co.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cu.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cv.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cx.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cy.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\cz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\de.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\dj.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\dk.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\dm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\do.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\dz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ec.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ee.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\eg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\eh.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\er.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\es.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\et.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\fi.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\fj.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\fk.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\fm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\fo.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\fr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ga.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gb.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gd.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ge.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gf.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gh.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gi.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gl.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gp.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gq.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gs.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gt.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gu.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\gy.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\hk.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\hm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\hn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\hr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ht.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\hu.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\id.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ie.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\il.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\im.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\in.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\io.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\iq.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ir.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\is.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\it.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\je.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\jm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\jo.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\jp.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ke.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\kg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\kh.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ki.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\km.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\kn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\kp.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\kr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\kw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ky.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\kz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\la.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\lb.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\lc.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\li.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\lk.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\lr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ls.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\lt.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\lu.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\lv.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ly.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ma.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mc.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\md.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\me.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mf.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mh.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mk.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ml.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mo.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mp.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mq.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ms.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mt.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mu.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mv.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mx.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\my.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\mz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\na.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\nc.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ne.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\nf.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ng.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ni.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\nl.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\no.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\np.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\nr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\nu.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\nz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\om.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pa.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pe.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pf.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ph.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pk.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pl.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ps.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pt.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\pw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\py.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\qa.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\re.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ro.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\rs.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ru.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\rw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sa.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sb.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sc.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sd.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\se.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sh.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\si.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sj.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sk.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sl.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\so.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ss.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\st.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sv.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sx.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sy.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\sz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tc.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\td.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tf.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\th.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tj.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tk.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tl.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\to.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tr.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tt.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tv.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\tz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ua.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ug.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\um.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\us.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\uy.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\uz.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\va.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\vc.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ve.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\vg.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\vi.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\vn.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\vu.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\wf.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ws.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\ye.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\yt.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\za.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\zm.svg" />
+    <Content Include="Customer\assets\vendor\fonts\flag-icon-css\flags\zw.svg" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\css\fontawesome-all.css" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.html" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.html" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.html" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Customer\assets\vendor\fonts\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="Customer\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.html" />
+    <Content Include="Customer\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.svg" />
+    <Content Include="Customer\assets\vendor\fonts\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Customer\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.html" />
+    <Content Include="Customer\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.svg" />
+    <Content Include="Customer\assets\vendor\fonts\themify-icons\fonts\themify9f24.svg" />
+    <Content Include="Customer\assets\vendor\fonts\themify-icons\themify-icons.css" />
+    <Content Include="Customer\assets\vendor\fonts\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Customer\assets\vendor\full-calendar\css\fullcalendar.css" />
+    <Content Include="Customer\assets\vendor\full-calendar\css\fullcalendar.print.css" />
+    <Content Include="Customer\assets\vendor\full-calendar\js\calendar.js" />
+    <Content Include="Customer\assets\vendor\full-calendar\js\fullcalendar.js" />
+    <Content Include="Customer\assets\vendor\full-calendar\js\jquery-ui.min.js" />
+    <Content Include="Customer\assets\vendor\full-calendar\js\moment.min.js" />
+    <Content Include="Customer\assets\vendor\gauge\gauge.js" />
+    <Content Include="Customer\assets\vendor\gauge\gauge.min.js" />
+    <Content Include="Customer\assets\vendor\inputmask\css\inputmask.css" />
+    <Content Include="Customer\assets\vendor\inputmask\js\jquery.inputmask.bundle.js" />
+    <Content Include="Customer\assets\vendor\jquery\jquery-3.3.1.min.js" />
+    <Content Include="Customer\assets\vendor\jvectormap\jquery-jvectormap-2.0.2.css" />
+    <Content Include="Customer\assets\vendor\jvectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="Customer\assets\vendor\jvectormap\jquery-jvectormap-au-mill.js" />
+    <Content Include="Customer\assets\vendor\jvectormap\jquery-jvectormap-in-mill.js" />
+    <Content Include="Customer\assets\vendor\jvectormap\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="Customer\assets\vendor\jvectormap\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Customer\assets\vendor\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Customer\assets\vendor\multi-select\css\multi-select.css" />
+    <Content Include="Customer\assets\vendor\multi-select\js\jquery.multi-select.js" />
+    <Content Include="Customer\assets\vendor\parsley\parsley.js" />
+    <Content Include="Customer\assets\vendor\select2\css\select2.css" />
+    <Content Include="Customer\assets\vendor\select2\js\select2.min.js" />
+    <Content Include="Customer\assets\vendor\shortable-nestable\jquery.nestable.js" />
+    <Content Include="Customer\assets\vendor\shortable-nestable\sort-nest.js" />
+    <Content Include="Customer\assets\vendor\shortable-nestable\Sortable.min.js" />
+    <Content Include="Customer\assets\vendor\slimscroll\jquery.slimscroll.js" />
+    <Content Include="Customer\assets\vendor\summernote\css\summernote-bs4.css" />
+    <Content Include="Customer\assets\vendor\summernote\js\summernote-bs4.js" />
+    <Content Include="Customer\assets\vendor\timeline\img\cd-icon-location.svg" />
+    <Content Include="Customer\assets\vendor\timeline\img\cd-icon-movie.svg" />
+    <Content Include="Customer\assets\vendor\timeline\img\cd-icon-picture.svg" />
+    <Content Include="Customer\assets\vendor\timeline\js\main.js" />
+    <Content Include="Customer\assets\vendor\vector-map\jqvmap.css" />
+    <Content Include="Customer\images\demo\100x100.png" />
+    <Content Include="Customer\images\demo\348x261.png" />
+    <Content Include="Customer\images\demo\alothes-t-shirts.jpg" />
+    <Content Include="Customer\images\demo\avatar.png" />
+    <Content Include="Customer\images\demo\backgrounds\01.png" />
+    <Content Include="Customer\images\demo\backgrounds\02.jpeg" />
+    <Content Include="Customer\images\demo\backgrounds\03.jpg" />
+    <Content Include="Customer\images\demo\Bag_Cleaning.jpg" />
+    <Content Include="Customer\images\demo\business-cafe-coffee-drinking.jpg" />
+    <Content Include="Customer\images\demo\Carpat.jpg" />
+    <Content Include="Customer\images\demo\cleaning-services.jpg" />
+    <Content Include="Customer\images\demo\Dry_cleaning.jpg" />
+    <Content Include="Customer\images\demo\fier.jpg" />
+    <Content Include="Customer\images\demo\fs6-img1.jpg" />
+    <Content Include="Customer\images\demo\gallery\01.png" />
+    <Content Include="Customer\images\demo\gallery\index.html" />
+    <Content Include="Customer\images\demo\images.jpg" />
+    <Content Include="Customer\images\demo\imgl.gif" />
+    <Content Include="Customer\images\demo\imgr.gif" />
+    <Content Include="Customer\images\demo\index.html" />
+    <Content Include="Customer\images\demo\iStock.jpg" />
+    <Content Include="Customer\images\demo\pexels-photo-996329.jpeg" />
+    <Content Include="Customer\images\demo\Plain-t-shirts-wallpaper.jpg" />
+    <Content Include="Customer\images\demo\shoe.jpg" />
+    <Content Include="Customer\images\demo\wash-fold.jpg" />
+    <Content Include="Customer\images\demo\wash-fold0.jpg" />
+    <Content Include="Customer\images\index.html" />
+    <Content Include="Customer\layout\scripts\index.html" />
+    <Content Include="Customer\layout\scripts\jquery.backtotop.js" />
+    <Content Include="Customer\layout\scripts\jquery.min.js" />
+    <Content Include="Customer\layout\scripts\jquery.mobilemenu.js" />
+    <Content Include="Customer\layout\styles\fontawesome-free\css\fontawesome-all.min.css" />
+    <Content Include="Customer\layout\styles\fontawesome-free\css\index.html" />
+    <Content Include="Customer\layout\styles\fontawesome-free\index.html" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\index.html" />
+    <Content Include="Customer\layout\styles\framework.css" />
+    <Content Include="Customer\layout\styles\index.html" />
+    <Content Include="Customer\layout\styles\layout.css" />
+    <Content Include="Customer\layout\styles\register.css" />
+    <Content Include="Customer_orderTrace.aspx" />
+    <Content Include="cus_order.aspx" />
+    <Content Include="pendingReport.aspx" />
+    <Content Include="saleReport.aspx" />
+    <Content Include="invoiceReports.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="signUp.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="newOrder.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="manageOrder.aspx" />
+    <Content Include="services.aspx" />
+    <Content Include="Payment.aspx" />
+    <Content Include="userAccount.aspx" />
+    <Content Include="manageUser.aspx" />
+    <Content Include="invoice.aspx" />
+    <Content Include="sale.aspx" />
+    <Content Include="pending.aspx" />
+    <Content Include="traceOrder.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer.Master.cs">
+      <DependentUpon>customer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer.Master.designer.cs">
+      <DependentUpon>customer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAccount.aspx.cs">
+      <DependentUpon>CustomerAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerAccount.aspx.designer.cs">
+      <DependentUpon>CustomerAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_orderTrace.aspx.cs">
+      <DependentUpon>Customer_orderTrace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_orderTrace.aspx.designer.cs">
+      <DependentUpon>Customer_orderTrace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cus_order.aspx.cs">
+      <DependentUpon>cus_order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cus_order.aspx.designer.cs">
+      <DependentUpon>cus_order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.Master.cs">
+      <DependentUpon>index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.Master.designer.cs">
+      <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="pending.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pending.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="pendingReport.aspx.cs">
+      <DependentUpon>pendingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pendingReport.aspx.designer.cs">
+      <DependentUpon>pendingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="saleReport.aspx.cs">
+      <DependentUpon>saleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="saleReport.aspx.designer.cs">
+      <DependentUpon>saleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invoiceReports.aspx.cs">
+      <DependentUpon>invoiceReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="invoiceReports.aspx.designer.cs">
+      <DependentUpon>invoiceReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="newOrder.aspx.cs">
+      <DependentUpon>newOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newOrder.aspx.designer.cs">
+      <DependentUpon>newOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manageOrder.aspx.cs">
+      <DependentUpon>manageOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manageOrder.aspx.designer.cs">
+      <DependentUpon>manageOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sale.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="services.aspx.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services.cs" />
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signUp.aspx.cs">
+      <DependentUpon>signUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signUp.aspx.designer.cs">
+      <DependentUpon>signUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="userAccount.aspx.cs">
+      <DependentUpon>userAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userAccount.aspx.designer.cs">
+      <DependentUpon>userAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manageUser.aspx.cs">
+      <DependentUpon>manageUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manageUser.aspx.designer.cs">
+      <DependentUpon>manageUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invoice.aspx.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="invoice.aspx.designer.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sale.aspx.cs">
+      <DependentUpon>sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sale.aspx.designer.cs">
+      <DependentUpon>sale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pending.aspx.cs">
+      <DependentUpon>pending.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pending.aspx.designer.cs">
+      <DependentUpon>pending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="traceOrder.aspx.cs">
+      <DependentUpon>traceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="traceOrder.aspx.designer.cs">
+      <DependentUpon>traceOrder.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.Master" />
+    <Content Include="assets\vendor\fonts\circular-std\CircularStd-Black.woff" />
+    <Content Include="assets\vendor\fonts\circular-std\CircularStd-BlackItalic.woff" />
+    <Content Include="assets\vendor\fonts\circular-std\CircularStd-Bold.woff" />
+    <Content Include="assets\vendor\fonts\circular-std\CircularStd-BoldItalic.woff" />
+    <Content Include="assets\vendor\fonts\circular-std\CircularStd-Book.woff" />
+    <Content Include="assets\vendor\fonts\circular-std\CircularStd-BookItalic.woff" />
+    <Content Include="assets\vendor\fonts\circular-std\CircularStd-Medium.woff" />
+    <Content Include="assets\vendor\fonts\circular-std\CircularStd-MediumItalic.woff" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="assets\vendor\fonts\fontawesome\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontd41d.eot" />
+    <Content Include="assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.eot" />
+    <Content Include="assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.ttf" />
+    <Content Include="assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.woff" />
+    <Content Include="assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.eot" />
+    <Content Include="assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.ttf" />
+    <Content Include="assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.woff" />
+    <Content Include="assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Iconsd41d.eot" />
+    <Content Include="assets\vendor\fonts\themify-icons\fonts\themify.ttf" />
+    <Content Include="assets\vendor\fonts\themify-icons\fonts\themify.woff" />
+    <Content Include="assets\vendor\fonts\themify-icons\fonts\themify9f24.eot" />
+    <Content Include="assets\vendor\fonts\themify-icons\fonts\themifyd41d.eot" />
+    <Content Include="assets\vendor\fonts\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="assets\vendor\summernote\css\font\summernote.eot" />
+    <Content Include="assets\vendor\summernote\css\font\summernote.ttf" />
+    <Content Include="assets\vendor\summernote\css\font\summernote.woff" />
+    <Content Include="assets\vendor\summernote\css\font\summernote.woff2" />
+    <Content Include="customer.Master" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\CircularStd-Black.woff" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\CircularStd-BlackItalic.woff" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\CircularStd-Bold.woff" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\CircularStd-BoldItalic.woff" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\CircularStd-Book.woff" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\CircularStd-BookItalic.woff" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\CircularStd-Medium.woff" />
+    <Content Include="Customer\assets\vendor\fonts\circular-std\CircularStd-MediumItalic.woff" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="Customer\assets\vendor\fonts\fontawesome\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="Customer\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontd41d.eot" />
+    <Content Include="Customer\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.eot" />
+    <Content Include="Customer\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.ttf" />
+    <Content Include="Customer\assets\vendor\fonts\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.woff" />
+    <Content Include="Customer\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.eot" />
+    <Content Include="Customer\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.ttf" />
+    <Content Include="Customer\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Icons4c82.woff" />
+    <Content Include="Customer\assets\vendor\fonts\simple-line-icons\fonts\Simple-Line-Iconsd41d.eot" />
+    <Content Include="Customer\assets\vendor\fonts\themify-icons\fonts\themify.ttf" />
+    <Content Include="Customer\assets\vendor\fonts\themify-icons\fonts\themify.woff" />
+    <Content Include="Customer\assets\vendor\fonts\themify-icons\fonts\themify9f24.eot" />
+    <Content Include="Customer\assets\vendor\fonts\themify-icons\fonts\themifyd41d.eot" />
+    <Content Include="Customer\assets\vendor\fonts\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Customer\assets\vendor\summernote\css\font\summernote.eot" />
+    <Content Include="Customer\assets\vendor\summernote\css\font\summernote.ttf" />
+    <Content Include="Customer\assets\vendor\summernote\css\font\summernote.woff" />
+    <Content Include="Customer\assets\vendor\summernote\css\font\summernote.woff2" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="Customer\layout\styles\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="crystalreportviewers13\ActiveXControls\crviewer.dep" />
+    <Content Include="crystalreportviewers13\crsmarttag.jsp" />
+    <Content Include="crystalreportviewers13\preview.jsp" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Invoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pending.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>pending.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Sale.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55122</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55122/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
